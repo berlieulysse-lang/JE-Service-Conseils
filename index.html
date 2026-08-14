@@ -2,26 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="JE Services Conseils — conseil financier, fiscalité, comptabilité et développement d'affaires à Shawinigan, Québec.">
+    <meta name="description" content="JE Services Conseils — Finance, fiscalité, comptabilité et développement d'affaires. Des solutions professionnelles et stratégiques pour vous accompagner dans vos décisions financières.">
 
     <title>JE Services Conseils | Finance, Fiscalité & Comptabilité</title>
 
-    <link rel="stylesheet" href="style.css">
-
     <style>
-        :root {
-            --navy: #07182f;
-            --navy-light: #102a4c;
-            --gold: #d4a63a;
-            --gold-light: #f1cf78;
-            --white: #ffffff;
-            --light: #f6f7f9;
-            --text: #263238;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -34,8 +21,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            color: var(--text);
-            background: var(--white);
+            color: #17243b;
+            background: #ffffff;
             line-height: 1.6;
         }
 
@@ -44,438 +31,680 @@
             color: inherit;
         }
 
-        .container {
-            width: min(1120px, 92%);
-            margin: auto;
+        img {
+            max-width: 100%;
+            display: block;
         }
 
-        /* NAVIGATION */
+        .container {
+            width: min(1120px, 92%);
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
 
         header {
-            background: var(--navy);
-            color: var(--white);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+            background: rgba(255, 255, 255, 0.97);
+            border-bottom: 1px solid #e8e8e8;
+            backdrop-filter: blur(10px);
         }
 
-        .nav {
-            min-height: 78px;
+        .navbar {
+            min-height: 82px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 25px;
+            gap: 30px;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-family: Georgia, serif;
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: var(--gold-light);
+            gap: 13px;
         }
 
-        .brand-mark {
-            font-size: 1.5rem;
-            color: var(--gold);
-        }
-
-        nav ul {
-            list-style: none;
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            border: 2px solid #cda83d;
             display: flex;
-            gap: 25px;
+            align-items: center;
+            justify-content: center;
+            color: #cda83d;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            background: #07172f;
+        }
+
+        .brand-text {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 21px;
+            font-weight: bold;
+            color: #10213d;
+            letter-spacing: 0.3px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
         }
 
         nav a {
-            color: white;
-            font-size: 0.95rem;
-            transition: 0.3s;
+            font-size: 15px;
+            font-weight: 600;
+            color: #1b2638;
+            transition: 0.25s ease;
         }
 
         nav a:hover {
-            color: var(--gold-light);
+            color: #c59c32;
         }
 
-        /* HERO */
+        .nav-button {
+            padding: 11px 20px;
+            border-radius: 5px;
+            background: #cda83d;
+            color: #ffffff !important;
+        }
+
+        .nav-button:hover {
+            background: #ad8828;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
 
         .hero {
-            min-height: 78vh;
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(7,24,47,0.88),
-                    rgba(7,24,47,0.35)
-                ),
-                url("JE_Services_Conseils_Photo_Principale.png") center/cover no-repeat;
-
-            display: flex;
-            align-items: center;
-            color: white;
+            background: #07172f;
+            color: #ffffff;
+            padding: 90px 0 85px;
         }
 
-        .hero-content {
-            max-width: 650px;
-            padding: 90px 0;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 60px;
+            align-items: center;
         }
 
         .eyebrow {
-            color: var(--gold-light);
-            font-size: 0.95rem;
-            font-weight: bold;
-            letter-spacing: 2px;
+            color: #d8b557;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2.4rem, 6vw, 4.7rem);
+            font-size: clamp(42px, 5vw, 66px);
             line-height: 1.08;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
+            font-weight: 700;
         }
 
         .hero h1 span {
-            color: var(--gold-light);
+            color: #d9b354;
         }
 
         .hero p {
-            font-size: 1.15rem;
-            max-width: 580px;
-            margin-bottom: 30px;
+            max-width: 620px;
+            font-size: 18px;
+            color: #e7ebf1;
+            margin-bottom: 32px;
         }
 
-        .buttons {
+        .hero-buttons {
             display: flex;
-            gap: 15px;
             flex-wrap: wrap;
+            gap: 14px;
         }
 
-        .btn {
+        .button {
             display: inline-block;
-            padding: 13px 23px;
+            padding: 14px 25px;
             border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 700;
+            transition: 0.25s ease;
         }
 
-        .btn-gold {
-            background: var(--gold);
-            color: var(--navy);
+        .button-primary {
+            background: #d2aa3f;
+            color: #101c30;
         }
 
-        .btn-gold:hover {
-            background: var(--gold-light);
+        .button-primary:hover {
+            background: #e0bd63;
+            transform: translateY(-2px);
         }
 
-        .btn-outline {
-            border: 1px solid white;
-            color: white;
+        .button-outline {
+            border: 1px solid #d2aa3f;
+            color: #ffffff;
         }
 
-        .btn-outline:hover {
-            background: white;
-            color: var(--navy);
+        .button-outline:hover {
+            background: #d2aa3f;
+            color: #101c30;
         }
 
-        /* SECTIONS */
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title small {
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-
-        .section-title h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            color: var(--navy);
-            font-size: 2.4rem;
-            margin-top: 8px;
-        }
-
-        .section-title p {
-            max-width: 680px;
-            margin: 12px auto 0;
-            color: #667085;
-        }
-
-        /* ABOUT */
-
-        .about {
-            background: var(--light);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 55px;
-            align-items: center;
-        }
-
-        .about h2 {
-            color: var(--navy);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 2.2rem;
-            margin-bottom: 18px;
-        }
-
-        .about p {
-            margin-bottom: 16px;
-        }
-
-        .highlight {
-            border-left: 4px solid var(--gold);
-            padding-left: 18px;
-            margin-top: 25px;
-            font-weight: bold;
-            color: var(--navy);
-        }
-
-        .about-card {
-            background: var(--navy);
-            color: white;
-            padding: 40px;
+        .hero-card {
+            padding: 34px;
+            border: 1px solid rgba(210, 170, 63, 0.35);
+            background: rgba(255, 255, 255, 0.04);
             border-radius: 10px;
-            box-shadow: 0 15px 40px rgba(7,24,47,0.18);
         }
 
-        .about-card h3 {
-            color: var(--gold-light);
+        .hero-card-title {
+            color: #d8b557;
             font-family: Georgia, serif;
+            font-size: 23px;
             margin-bottom: 15px;
-            font-size: 1.6rem;
         }
 
-        /* SERVICES */
+        .hero-card p {
+            font-size: 16px;
+            margin-bottom: 0;
+            color: #dce2ea;
+        }
+
+        /* =========================
+           PHOTO PRINCIPALE
+        ========================== */
+
+        .photo-section {
+            padding: 70px 0 90px;
+            background: #f7f8fa;
+        }
+
+        .main-photo {
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 18px 50px rgba(9, 25, 48, 0.15);
+            background: #ffffff;
+        }
+
+        .main-photo img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .photo-caption {
+            text-align: center;
+            max-width: 760px;
+            margin: 28px auto 0;
+        }
+
+        .photo-caption h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #10213d;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .photo-caption p {
+            color: #667085;
+            font-size: 16px;
+        }
+
+        /* =========================
+           SECTION TITLE
+        ========================== */
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-light {
+            background: #ffffff;
+        }
+
+        .section-dark {
+            background: #07172f;
+            color: #ffffff;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 50px;
+        }
+
+        .section-heading .eyebrow {
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(34px, 4vw, 48px);
+            color: #10213d;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .section-dark .section-heading h2 {
+            color: #ffffff;
+        }
+
+        .section-heading p {
+            color: #687385;
+            font-size: 17px;
+        }
+
+        .section-dark .section-heading p {
+            color: #d8dee7;
+        }
+
+        /* =========================
+           SERVICES
+        ========================== */
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 22px;
         }
 
         .service-card {
-            background: white;
-            border: 1px solid #e6e8ec;
-            border-radius: 9px;
-            padding: 30px 23px;
-            transition: 0.3s;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            padding: 34px;
+            border: 1px solid #e7e9ed;
+            border-radius: 12px;
+            background: #ffffff;
+            transition: 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: var(--gold);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 35px rgba(12, 30, 55, 0.09);
+            border-color: #d4b05a;
         }
 
-        .service-icon {
-            width: 52px;
-            height: 52px;
+        .service-number {
+            width: 45px;
+            height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--navy);
-            color: var(--gold-light);
             border-radius: 50%;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            background: #07172f;
+            color: #d8b557;
+            font-weight: bold;
+            margin-bottom: 22px;
         }
 
         .service-card h3 {
-            color: var(--navy);
-            margin-bottom: 10px;
-            font-family: Georgia, serif;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+            color: #10213d;
+            margin-bottom: 12px;
         }
 
         .service-card p {
             color: #667085;
-            font-size: 0.95rem;
+            font-size: 15.5px;
         }
 
-        /* APPROACH */
+        /* =========================
+           ABOUT
+        ========================== */
 
-        .approach {
-            background: var(--navy);
-            color: white;
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
 
-        .approach .section-title h2 {
-            color: white;
+        .about-content h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #10213d;
+            font-size: 43px;
+            line-height: 1.15;
+            margin-bottom: 20px;
         }
 
-        .approach .section-title p {
-            color: #d9e0ea;
+        .about-content p {
+            color: #667085;
+            margin-bottom: 17px;
+            font-size: 16px;
         }
 
-        .approach-grid {
+        .values {
+            display: grid;
+            gap: 15px;
+        }
+
+        .value {
+            padding: 22px;
+            border-left: 4px solid #d2aa3f;
+            background: #f7f8fa;
+        }
+
+        .value h3 {
+            color: #10213d;
+            font-family: Georgia, serif;
+            margin-bottom: 5px;
+        }
+
+        .value p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* =========================
+           WHY US
+        ========================== */
+
+        .why-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 22px;
         }
 
-        .approach-item {
+        .why-card {
             text-align: center;
-            padding: 25px;
+            padding: 35px 25px;
+            border: 1px solid rgba(255,255,255,0.13);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.035);
         }
 
-        .number {
-            color: var(--gold-light);
+        .why-icon {
+            font-size: 30px;
+            color: #d6b04f;
+            margin-bottom: 16px;
+        }
+
+        .why-card h3 {
             font-family: Georgia, serif;
-            font-size: 2.7rem;
+            font-size: 21px;
             margin-bottom: 10px;
         }
 
-        .approach-item h3 {
-            margin-bottom: 10px;
+        .why-card p {
+            color: #d3dae4;
+            font-size: 14.5px;
         }
 
-        .approach-item p {
-            color: #d9e0ea;
+        /* =========================
+           CTA
+        ========================== */
+
+        .cta {
+            background: #f7f8fa;
+            padding: 85px 0;
         }
 
-        /* CONTACT */
-
-        .contact {
-            background: var(--light);
+        .cta-box {
+            background: #07172f;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 55px;
+            text-align: center;
+            box-shadow: 0 20px 45px rgba(10, 27, 50, 0.15);
         }
 
-        .contact-box {
-            background: white;
-            border-radius: 12px;
-            padding: 45px;
+        .cta-box h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(32px, 4vw, 46px);
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: #dce2e9;
+            max-width: 680px;
+            margin: 0 auto 28px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.07);
         }
 
-        .contact h2 {
-            color: var(--navy);
+        .contact-info h2 {
             font-family: Georgia, serif;
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-        }
-
-        .contact-info {
-            margin-top: 25px;
-        }
-
-        .contact-info p {
+            font-size: 42px;
+            color: #10213d;
             margin-bottom: 18px;
         }
 
-        .contact-info strong {
-            color: var(--navy);
+        .contact-info > p {
+            color: #667085;
+            margin-bottom: 28px;
         }
 
-        .contact-email {
-            color: var(--gold);
-            font-weight: bold;
-            word-break: break-word;
+        .contact-item {
+            margin-bottom: 20px;
         }
 
-        .contact-card {
-            background: var(--navy);
-            color: white;
-            padding: 35px;
-            border-radius: 8px;
+        .contact-item strong {
+            display: block;
+            color: #10213d;
+            margin-bottom: 4px;
         }
 
-        .contact-card h3 {
-            color: var(--gold-light);
+        .contact-item span,
+        .contact-item a {
+            color: #667085;
+        }
+
+        .contact-item a:hover {
+            color: #c39a32;
+        }
+
+        .contact-box {
+            background: #f7f8fa;
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid #e6e8ec;
+        }
+
+        .contact-box h3 {
             font-family: Georgia, serif;
-            margin-bottom: 15px;
+            font-size: 25px;
+            color: #10213d;
+            margin-bottom: 20px;
         }
 
-        /* FOOTER */
+        .contact-box p {
+            color: #667085;
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
-            background: #041020;
-            color: #cbd5e1;
-            padding: 35px 0;
-            text-align: center;
+            background: #061328;
+            color: #ffffff;
+            padding: 50px 0 25px;
         }
 
-        footer .footer-brand {
-            color: var(--gold-light);
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .footer-brand {
             font-family: Georgia, serif;
-            font-size: 1.25rem;
-            margin-bottom: 8px;
+            font-size: 25px;
+            color: #d8b557;
+            margin-bottom: 12px;
         }
 
         footer p {
-            font-size: 0.9rem;
+            color: #bdc6d2;
+            font-size: 14px;
         }
 
-        /* MOBILE */
+        .footer-column h3 {
+            font-family: Georgia, serif;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #bdc6d2;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .footer-column a:hover {
+            color: #d8b557;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 22px;
+            color: #9da8b7;
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
 
         @media (max-width: 850px) {
 
-            nav ul {
+            .navbar {
+                min-height: 72px;
+            }
+
+            .brand-text {
+                font-size: 17px;
+            }
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a:not(.nav-button) {
                 display: none;
             }
 
+            .nav-button {
+                padding: 9px 15px;
+                font-size: 13px;
+            }
+
             .hero {
-                min-height: 75vh;
-                background-position: center;
+                padding: 65px 0;
             }
 
-            .hero-content {
-                padding: 70px 0;
-            }
-
+            .hero-grid,
             .about-grid,
-            .contact-box {
+            .contact-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .approach-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            section {
-                padding: 60px 0;
+                gap: 38px;
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 43px;
             }
 
-            .hero p {
-                font-size: 1rem;
+            .hero-card {
+                padding: 25px;
+            }
+
+            .photo-section {
+                padding: 45px 0 65px;
+            }
+
+            .main-photo {
+                border-radius: 16px;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
             }
 
-            .contact-box {
-                padding: 28px 22px;
+            .why-grid {
+                grid-template-columns: 1fr;
             }
 
-            .about-card,
-            .contact-card {
-                padding: 28px 22px;
+            .section {
+                padding: 65px 0;
+            }
+
+            .about-content h2,
+            .contact-info h2 {
+                font-size: 35px;
+            }
+
+            .cta {
+                padding: 60px 0;
+            }
+
+            .cta-box {
+                padding: 38px 23px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                text-align: center;
+                width: 100%;
+            }
+
+            .photo-caption h2 {
+                font-size: 27px;
+            }
+
+            .service-card {
+                padding: 27px;
+            }
+
+            .cta-box h2 {
+                font-size: 32px;
             }
         }
     </style>
@@ -483,38 +712,40 @@
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         HEADER
+    ========================== -->
+
     <header>
-        <div class="container nav">
+        <div class="container navbar">
 
             <a href="#accueil" class="brand">
-                <span class="brand-mark">JE</span>
-                <span>Services Conseils</span>
+                <div class="brand-logo">JE</div>
+                <div class="brand-text">Services Conseils</div>
             </a>
 
             <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">À propos</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#approche">Notre approche</a></li>
-                    <li><a href="#contact">Nous joindre</a></li>
-                </ul>
+                <a href="#accueil">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#apropos">À propos</a>
+                <a href="#contact" class="nav-button">Nous joindre</a>
             </nav>
 
         </div>
     </header>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <main>
 
         <section class="hero" id="accueil">
 
-            <div class="container">
+            <div class="container hero-grid">
 
-                <div class="hero-content">
-
+                <div>
                     <div class="eyebrow">
                         Finance • Fiscalité • Comptabilité
                     </div>
@@ -525,104 +756,93 @@
                     </h1>
 
                     <p>
-                        JE Services Conseils vous accompagne avec une approche
-                        professionnelle et stratégique en finance, fiscalité,
-                        comptabilité et développement d'affaires.
+                        JE Services Conseils vous accompagne avec une
+                        approche professionnelle et stratégique en finance,
+                        fiscalité, comptabilité et développement d'affaires.
                     </p>
 
-                    <div class="buttons">
-
-                        <a href="#services" class="btn btn-gold">
+                    <div class="hero-buttons">
+                        <a href="#services" class="button button-primary">
                             Découvrir nos services
                         </a>
 
-                        <a href="#contact" class="btn btn-outline">
+                        <a href="#contact" class="button button-outline">
                             Nous joindre
                         </a>
-
                     </div>
-
                 </div>
 
-            </div>
 
-        </section>
+                <div class="hero-card">
 
-
-        <!-- À PROPOS -->
-        <section class="about" id="apropos">
-
-            <div class="container">
-
-                <div class="about-grid">
-
-                    <div>
-
-                        <div class="section-title" style="text-align:left; margin-bottom:20px;">
-                            <small>À propos de nous</small>
-                            <h2>Des décisions financières mieux éclairées.</h2>
-                        </div>
-
-                        <p>
-                            JE Services Conseils accompagne les particuliers,
-                            les travailleurs autonomes et les entreprises dans
-                            leurs besoins liés à la gestion financière et au
-                            développement de leurs activités.
-                        </p>
-
-                        <p>
-                            Notre objectif est de simplifier les décisions
-                            financières et d'offrir une vision claire afin de
-                            vous aider à planifier, optimiser et grandir.
-                        </p>
-
-                        <p class="highlight">
-                            Planifier. Optimiser. Grandir.
-                        </p>
-
+                    <div class="hero-card-title">
+                        Une vision stratégique pour votre avenir
                     </div>
-
-                    <div class="about-card">
-
-                        <h3>Une approche stratégique</h3>
-
-                        <p>
-                            Nous privilégions une approche personnalisée,
-                            structurée et orientée vers les objectifs de chaque
-                            client.
-                        </p>
-
-                        <br>
-
-                        <p>
-                            Parce qu'une bonne gestion financière ne consiste
-                            pas seulement à regarder les chiffres : elle consiste
-                            à comprendre ce qu'ils signifient pour votre avenir.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SERVICES -->
-        <section id="services">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <small>Nos expertises</small>
-
-                    <h2>Des services conçus pour vos besoins</h2>
 
                     <p>
-                        Des solutions professionnelles pour mieux structurer,
-                        comprendre et développer vos finances et vos activités.
+                        Nous vous aidons à mieux comprendre vos finances,
+                        à prendre des décisions éclairées et à structurer
+                        vos projets avec une approche claire, professionnelle
+                        et adaptée à vos objectifs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PHOTO PRINCIPALE
+        ========================== -->
+
+        <section class="photo-section">
+
+            <div class="container">
+
+                <div class="main-photo">
+                    <img
+                        src="JE_Services_Conseils_Photo_Principale.png"
+                        alt="Bureau professionnel de JE Services Conseils"
+                    >
+                </div>
+
+                <div class="photo-caption">
+                    <h2>Une expertise au service de vos ambitions</h2>
+
+                    <p>
+                        Une approche professionnelle, structurée et orientée
+                        vers des solutions concrètes pour vos projets.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
+        <section class="section section-light" id="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        Nos expertises
+                    </div>
+
+                    <h2>
+                        Des services conçus pour vous accompagner
+                    </h2>
+
+                    <p>
+                        Des solutions professionnelles adaptées aux besoins
+                        des particuliers, entrepreneurs et entreprises.
                     </p>
 
                 </div>
@@ -632,14 +852,14 @@
 
                     <article class="service-card">
 
-                        <div class="service-icon">₣</div>
+                        <div class="service-number">01</div>
 
                         <h3>Conseil financier</h3>
 
                         <p>
-                            Accompagnement dans la planification financière,
-                            l'organisation et la prise de décisions financières
-                            éclairées.
+                            Accompagnement stratégique pour mieux comprendre
+                            votre situation financière, planifier vos projets
+                            et prendre des décisions plus éclairées.
                         </p>
 
                     </article>
@@ -647,13 +867,14 @@
 
                     <article class="service-card">
 
-                        <div class="service-icon">%</div>
+                        <div class="service-number">02</div>
 
                         <h3>Fiscalité</h3>
 
                         <p>
-                            Soutien et orientation en matière de fiscalité afin
-                            de mieux comprendre vos obligations et vos options.
+                            Des conseils et une approche structurée pour vous
+                            aider à mieux comprendre vos obligations fiscales
+                            et à organiser efficacement vos informations.
                         </p>
 
                     </article>
@@ -661,14 +882,14 @@
 
                     <article class="service-card">
 
-                        <div class="service-icon">▣</div>
+                        <div class="service-number">03</div>
 
                         <h3>Comptabilité</h3>
 
                         <p>
-                            Solutions d'organisation et de suivi comptable
-                            adaptées aux besoins des particuliers et des
-                            entreprises.
+                            Organisation et accompagnement comptable afin de
+                            vous permettre de suivre vos données financières
+                            avec plus de clarté et de contrôle.
                         </p>
 
                     </article>
@@ -676,14 +897,14 @@
 
                     <article class="service-card">
 
-                        <div class="service-icon">↗</div>
+                        <div class="service-number">04</div>
 
                         <h3>Développement d'affaires</h3>
 
                         <p>
-                            Conseils stratégiques pour structurer vos activités,
-                            améliorer votre organisation et favoriser votre
-                            croissance.
+                            Accompagnement stratégique pour structurer vos
+                            projets, améliorer votre organisation et soutenir
+                            la croissance de votre entreprise.
                         </p>
 
                     </article>
@@ -695,64 +916,138 @@
         </section>
 
 
-        <!-- APPROCHE -->
-        <section class="approach" id="approche">
+        <!-- =========================
+             À PROPOS
+        ========================== -->
 
-            <div class="container">
+        <section class="section section-light" id="apropos">
 
-                <div class="section-title">
+            <div class="container about-grid">
 
-                    <small>Notre méthode</small>
+                <div class="about-content">
 
-                    <h2>Une démarche simple et structurée</h2>
+                    <div class="eyebrow">
+                        À propos
+                    </div>
+
+                    <h2>
+                        Une approche professionnelle et humaine.
+                    </h2>
 
                     <p>
-                        Nous avançons avec vous à chaque étape afin de transformer
-                        vos objectifs en actions concrètes.
+                        JE Services Conseils a pour mission d'offrir un
+                        accompagnement clair, professionnel et stratégique
+                        aux personnes et aux entreprises qui souhaitent
+                        mieux structurer leurs décisions financières.
+                    </p>
+
+                    <p>
+                        Nous croyons qu'une bonne compréhension de vos
+                        finances est essentielle pour planifier, optimiser
+                        et faire grandir vos projets avec confiance.
                     </p>
 
                 </div>
 
 
-                <div class="approach-grid">
+                <div class="values">
 
-                    <div class="approach-item">
+                    <div class="value">
+                        <h3>Clarté</h3>
+                        <p>
+                            Des explications simples et une approche structurée
+                            pour vous permettre de mieux comprendre vos options.
+                        </p>
+                    </div>
 
-                        <div class="number">01</div>
+                    <div class="value">
+                        <h3>Stratégie</h3>
+                        <p>
+                            Une vision orientée vers vos objectifs et vos
+                            priorités à court, moyen et long terme.
+                        </p>
+                    </div>
 
-                        <h3>Comprendre</h3>
+                    <div class="value">
+                        <h3>Professionnalisme</h3>
+                        <p>
+                            Un accompagnement sérieux, confidentiel et adapté
+                            à chaque situation.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             POURQUOI NOUS
+        ========================== -->
+
+        <section class="section section-dark">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        Pourquoi nous choisir
+                    </div>
+
+                    <h2>
+                        Planifier. Optimiser. Grandir.
+                    </h2>
+
+                    <p>
+                        Notre approche vise à vous donner les outils et la
+                        compréhension nécessaires pour avancer avec confiance.
+                    </p>
+
+                </div>
+
+
+                <div class="why-grid">
+
+                    <div class="why-card">
+
+                        <div class="why-icon">◆</div>
+
+                        <h3>Approche personnalisée</h3>
 
                         <p>
-                            Nous commençons par comprendre votre situation,
-                            vos besoins et vos objectifs.
+                            Des solutions adaptées à votre situation et à vos
+                            objectifs particuliers.
                         </p>
 
                     </div>
 
 
-                    <div class="approach-item">
+                    <div class="why-card">
 
-                        <div class="number">02</div>
+                        <div class="why-icon">◆</div>
 
-                        <h3>Planifier</h3>
+                        <h3>Vision stratégique</h3>
 
                         <p>
-                            Nous identifions les priorités et construisons une
-                            approche adaptée à votre situation.
+                            Une réflexion globale pour mieux planifier vos
+                            décisions et vos projets.
                         </p>
 
                     </div>
 
 
-                    <div class="approach-item">
+                    <div class="why-card">
 
-                        <div class="number">03</div>
+                        <div class="why-icon">◆</div>
 
-                        <h3>Grandir</h3>
+                        <h3>Accompagnement</h3>
 
                         <p>
-                            Nous vous aidons à avancer avec une stratégie claire
-                            et une meilleure vision de vos possibilités.
+                            Un service professionnel basé sur l'écoute,
+                            la clarté et la confiance.
                         </p>
 
                     </div>
@@ -764,76 +1059,99 @@
         </section>
 
 
-        <!-- CONTACT -->
-        <section class="contact" id="contact">
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta">
 
             <div class="container">
 
+                <div class="cta-box">
+
+                    <h2>
+                        Prêt à mieux structurer vos projets?
+                    </h2>
+
+                    <p>
+                        Parlons de vos besoins et découvrons ensemble
+                        comment JE Services Conseils peut vous accompagner.
+                    </p>
+
+                    <a href="#contact" class="button button-primary">
+                        Prendre contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section class="section section-light" id="contact">
+
+            <div class="container contact-grid">
+
+                <div class="contact-info">
+
+                    <div class="eyebrow">
+                        Nous joindre
+                    </div>
+
+                    <h2>
+                        Parlons de votre projet.
+                    </h2>
+
+                    <p>
+                        Vous avez une question ou souhaitez discuter de vos
+                        besoins? N'hésitez pas à communiquer avec nous.
+                    </p>
+
+
+                    <div class="contact-item">
+                        <strong>Adresse</strong>
+                        <span>
+                            3902 Rue Émile Deschênes<br>
+                            Shawinigan, Québec<br>
+                            Canada
+                        </span>
+                    </div>
+
+
+                    <div class="contact-item">
+                        <strong>Courriel</strong>
+
+                        <a href="mailto:joservicesconseils@gmail.com">
+                            joservicesconseils@gmail.com
+                        </a>
+                    </div>
+
+                </div>
+
+
                 <div class="contact-box">
 
-                    <div>
+                    <h3>
+                        Votre partenaire stratégique
+                    </h3>
 
-                        <div class="section-title" style="text-align:left; margin-bottom:10px;">
+                    <p>
+                        Finance, fiscalité, comptabilité et développement
+                        d'affaires — une approche structurée pour vous aider
+                        à avancer avec confiance.
+                    </p>
 
-                            <small>Nous joindre</small>
-
-                            <h2>Parlons de vos objectifs.</h2>
-
-                        </div>
-
-                        <p>
-                            Vous souhaitez obtenir plus d'information sur nos
-                            services? Communiquez avec JE Services Conseils.
-                        </p>
-
-
-                        <div class="contact-info">
-
-                            <p>
-                                <strong>Adresse</strong><br>
-                                3902 Rue Émile Deschênes<br>
-                                Shawinigan, Québec<br>
-                                G9P 5B1<br>
-                                Canada
-                            </p>
-
-
-                            <p>
-                                <strong>Courriel</strong><br>
-
-                                <a
-                                    class="contact-email"
-                                    href="mailto:jeservicesconseils@gmail.com"
-                                >
-                                    jeservicesconseils@gmail.com
-                                </a>
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-card">
-
-                        <h3>Un accompagnement adapté</h3>
-
-                        <p>
-                            Chaque situation est différente. Échangez avec nous
-                            afin de déterminer comment nos services peuvent
-                            répondre à vos besoins.
-                        </p>
-
-                        <br>
-
-                        <a
-                            href="mailto:jeservicesconseils@gmail.com"
-                            class="btn btn-gold"
-                        >
-                            Écrire à JE Services Conseils
-                        </a>
-
-                    </div>
+                    <a
+                        href="mailto:joservicesconseils@gmail.com"
+                        class="button button-primary"
+                    >
+                        Écrivez-nous
+                    </a>
 
                 </div>
 
@@ -844,22 +1162,57 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
 
         <div class="container">
 
-            <div class="footer-brand">
-                JE Services Conseils
+            <div class="footer-grid">
+
+                <div>
+                    <div class="footer-brand">
+                        JE Services Conseils
+                    </div>
+
+                    <p>
+                        Votre partenaire stratégique pour une gestion
+                        financière éclairée.
+                    </p>
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Navigation</h3>
+
+                    <a href="#accueil">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#apropos">À propos</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Services</h3>
+
+                    <a href="#services">Conseil financier</a>
+                    <a href="#services">Fiscalité</a>
+                    <a href="#services">Comptabilité</a>
+                    <a href="#services">Développement d'affaires</a>
+
+                </div>
+
             </div>
 
-            <p>
-                Finance • Fiscalité • Comptabilité • Développement d'affaires
-            </p>
 
-            <p>
+            <div class="copyright">
                 © 2026 JE Services Conseils. Tous droits réservés.
-            </p>
+            </div>
 
         </div>
 
